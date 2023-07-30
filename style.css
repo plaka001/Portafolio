@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-text: #fffffe;
+  --color-subText: #a7a9be;
+  --color-secondary: #ff8906;
+  --color-background: #0f0e17;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  line-height: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-background);
+}
+
+.bar {
+  background-color: var(--color-text);
+  border-radius: 12px;
+  width: 60%;
+  height: 1rem;
+}
+
+/* #region perfil */
+.profile {
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 16px;
+  margin: 2rem 2rem;
+  display: flex;
+  box-shadow: 4px 10px 13px -3px var(--color-secondary);
+}
+
+.profile-img img {
+  object-fit: cover;
+  border-radius: 16px;
+  width: 50%;
+}
+
+.profile-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact {
+  display: flex;
+  gap: 1.5rem;
+}
+.profile-contact {
+  display: flex;
+  flex-direction: column;
+}
+.span1 {
+  display: flex;
+  gap: 1rem;
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.span2 {
+  display: flex;
+  gap: 1rem;
+}
+
+.span2,
+.about-me {
+  color: var(--color-subText);
+  font-size: 14px;
+}
+/* #endregion perfil */
+
+/* -----------------***************--------------------- */
+
+/* #region Movil */
+@media screen and (max-width: 767px) {
+  /* #region perfil */
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-img img {
+    width: 50%;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .span1 {
+    font-size: 16px;
+  }
+
+  .span2,
+  .about-me {
+    color: #a7a9be;
+    font-size: 14px;
+  }
+  /* #endregion perfil */
+}
+/* #endregion Movil */
+
+/* -----------------***************--------------------- */
+
+/* #region Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* #region perfil */
+  .profile {
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 20%;
+  }
+
+  .profile-img img {
+    object-fit: cover;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .span1 {
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .span2 {
+    align-items: center;
+  }
+
+  .span2,
+  .about-me {
+    font-size: 16px;
+  }
+
+  /* #endregion perfil */
+}
+/* #endregion Table */
+
+/* -----------------***************--------------------- */
+
+/* #region Escritorio */
+@media screen and (min-width: 1025px) {
+  body {
+    margin: 2rem 10rem;
+  }
+
+  /* #region perfil */
+  .profile {
+    margin: 2rem auto;
+    justify-content: space-evenly;
+  }
+
+  .profile-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .profile-description {
+    gap: 6rem;
+  }
+
+  .span1 {
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .span2 {
+    align-items: center;
+  }
+
+  .span2,
+  .about-me {
+    font-size: 18px;
+  }
+  /* #endregion perfil */
+
+  /* #region aboutme */
+  .angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  #item-0 {
+    padding: 1rem;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+    border-radius: 12px;
+  }
+  #item-1 {
+    padding: 1rem;
+    border-radius: 12px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+  }
+  #item-2 {
+    padding: 1rem;
+    border-radius: 12px;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+  #item-3 {
+    background-color: #b7759d;
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 5;
+    grid-column-end: 2;
+  }
+  #item-4 {
+    background-color: #6be958;
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    grid-row-end: 5;
+    grid-column-end: 4;
+  }
+
+  #item-0,
+  #item-1,
+  #item-2,
+  #item-3,
+  #item-4 {
+    border: 1px solid var(--color-text);
+  }
+
+  #item-0:hover,
+  #item-1:hover,
+  #item-2:hover,
+  #item-3:hover,
+  #item-4:hover {
+    box-shadow: 4px 10px 13px -3px var(--color-secondary);
+  }
+
+  .skills {
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills-tittle {
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .skill-name {
+    width: 30%;
+    color: var(--color-subText);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .barJs {
+    border-radius: 12px;
+    width: 60%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+  .barAngular {
+    border-radius: 12px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+  .barHtml {
+    border-radius: 12px;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+  .barCss {
+    border-radius: 12px;
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barTs {
+    border-radius: 12px;
+    width: 60%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barC {
+    border-radius: 12px;
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barNode {
+    border-radius: 12px;
+    width: 20%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barMongo {
+    border-radius: 12px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barSql {
+    border-radius: 12px;
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barScrum {
+    border-radius: 12px;
+    width: 90%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barFigma {
+    border-radius: 12px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barVs {
+    border-radius: 12px;
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barVSS {
+    border-radius: 12px;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  .barGit {
+    border-radius: 12px;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  /* #endregion aboutme */
+}
+/* #endregion Escritorio */
