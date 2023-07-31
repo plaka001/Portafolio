@@ -29,11 +29,15 @@ body {
 
 /* #region perfil */
 .profile {
+  border: 1px solid var(--color-text);
   gap: 1rem;
   padding: 1rem;
   border-radius: 16px;
   margin: 2rem 2rem;
   display: flex;
+}
+
+.profile:hover {
   box-shadow: 4px 10px 13px -3px var(--color-secondary);
 }
 
@@ -218,15 +222,16 @@ body {
     grid-column-end: 4;
   }
   #item-3 {
-    background-color: #b7759d;
+    padding: 1rem;
+    border-radius: 12px;
     grid-row-start: 2;
     grid-column-start: 1;
-
     grid-row-end: 5;
     grid-column-end: 2;
   }
   #item-4 {
-    background-color: #6be958;
+    padding: 1rem;
+    border-radius: 12px;
     grid-row-start: 2;
     grid-column-start: 2;
 
@@ -257,7 +262,8 @@ body {
     align-items: center;
   }
 
-  .skills-tittle {
+  .skills-tittle,
+  .hoobie-tittle {
     margin-bottom: 1rem;
     color: var(--color-text);
     font-size: 18px;
@@ -365,6 +371,78 @@ body {
     width: 80%;
     height: 100%;
     background-color: var(--color-secondary);
+  }
+
+  .hoobie {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .hoobie img {
+    object-fit: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 13rem;
+  }
+
+  .hobbie-name {
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hobbie-description {
+    color: var(--color-subText);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .experiences-tittle {
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .experience {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+
+  .experience img {
+    border: 1px solid var(--color-text);
+    border-radius: 12px;
+    width: 90%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .lognTime {
+    color: var(--color-subText);
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .position {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .description {
+    color: var(--color-subText);
+    font-size: 16px;
+    font-weight: 500;
   }
 
   /* #endregion aboutme */
